@@ -1,0 +1,41 @@
+
+
+#header-title{
+    text-align: center;
+}
+
+#header-title h1{
+    margin-bottom: 0;
+}
+
+/* #header-title,p{
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(78, 81, 82);
+    text-decoration: none;
+    font-family: "YAEnXHTFXhg 0", _fb_, auto;
+    line-height: 47px;
+} */
+
+.lang{
+    text-align: right;
+    vertical-align: middle;
+}
+.lang p{
+    margin-bottom: 0;
+}
+
+#header-row{
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carousel-item{
+    height: 300px;
+    width: 300px;
+}
+
+#carouselExampleSlidesOnly{
+    margin-top: 7%;
+}

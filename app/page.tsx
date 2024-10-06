@@ -7,9 +7,9 @@ const ColorTextBoxes = ({
   color,
   imgsrc
 }) => (
-  <div className={`${textpos == "right" ? "pl-5" : ""} pr-5 mt-10 relative h-64 w-full`}>
-    <img className={`${textpos == "left" ? "pl-5" : ""} w-full h-full object-cover`} src={`/${imgsrc}`} />
-    <div className={`${textpos == "left" ? "rounded-r-lg" : "rounded-l-lg left-40"} bg-[${color}] w-64 ml-0 rounded-r-lg absolute top-40 border-dotted`} >
+  <div className="relative h-64 w-full">
+    <img className="w-full h-full object-cover" src={`/${imgsrc}`} />
+    <div className={`${textpos == "left" ? "rounded-r-lg left-0 fixed" : "rounded-l-lg left-40"} bg-[${color}] absolute w-64 ml-0 top-40 border-dotted sm:rounded-r-lg sm:rounded-l-lg`} >
       <div className={`${textpos == "left" ? "text-right mr-3 pl-5" : "ml-3 pr-5"} mt-3 mb-3`}>
         <p className="font-bold">{title}</p>
         <p className="">{text}</p>
@@ -52,20 +52,33 @@ export default function Home() {
         <p className="text-center sm:text-7xl text-xl text-[#4e5152]">SERVICES</p>
       </div>
 
-      <ColorTextBoxes
-        title={"SPACE PLANNING"}
-        text={"Not sure got to arrange your furniture? We can make your space work for your needs."}
-        textpos="right"
-        color={"#caf4ae"}
-        imgsrc={"3.jpg"} />
+      <div className="grid grid-cols-1 gap-10 pl-5 sm:pl-0 sm:grid-cols-3">
+        <ColorTextBoxes
+          title={"SPACE PLANNING"}
+          text={"Not sure got to arrange your furniture? We can make your space work for your needs."}
+          textpos="right"
+          color={"#caf4ae"}
+          imgsrc={"3.jpg"} />
 
-      <ColorTextBoxes
-        title={"INTERIOR DESIGN"}
-        text={"Struggling to come up with a coherent vision for your home? With us, from vision toplan."}
-        textpos="left"
-        color={"#f4daae"}
-        imgsrc={"1.jpg"} />
-{/* 
+        <ColorTextBoxes
+          title={"INTERIOR DESIGN"}
+          text={"Struggling to come up with a coherent vision for your home? With us, from vision to plan."}
+          textpos="left"
+          color={"#f4daae"}
+          imgsrc={"1.jpg"} />
+
+        <ColorTextBoxes
+          title={"FURNITURE SOURCING"}
+          text={"Are you overwhelmed by endless options? Let us make your choices easier."}
+          textpos="right"
+          color={"#aed7f4"}
+          imgsrc={"3.jpg"} />
+      </div>
+    </main>
+  );
+}
+
+        {/* 
       <div className="pr-5 mt-10 relative h-64 w-full">
         <img className="pl-5 w-full h-full object-cover" src="/1.jpg" />
         <div className="bg-[#f4daae] w-64 ml-0 rounded-r-lg absolute top-40 border-dotted">
@@ -75,34 +88,3 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-
-      <ColorTextBoxes
-        title={"FURNITURE SOURCING"}
-        text={"Are you overwhelmed by endless options? Let us make your choices easier."}
-        textpos="right"
-        color={"#aed7f4"}
-        imgsrc={"3.jpg"} />
-
-      <div className="hidden sm:block columns-3 ml-2 mr-5 mt-6 flex space-x-4">
-        <div>
-          <img className="pl-3 h-28" src="/3.jpg" />
-        </div>
-        <div className="absolute mt-10 ml-px">
-          <img className="w-32 h-16" src="/2.jpg" />
-        </div>
-        <div>
-          <img className="pl-3 h-28" src="/3.jpg" />
-        </div>
-        <div className="absolute ml-32 mt-20">
-          <img className="w-32 h-16" src="/2.jpg" />
-        </div>
-        <div>
-          <img className="pl-3 h-28" src="/3.jpg" />
-        </div>
-        <div className="absolute mt-20 ml-96">
-          <img className="w-32 h-16" src="/2.jpg" />
-        </div>
-      </div>
-    </main>
-  );
-}

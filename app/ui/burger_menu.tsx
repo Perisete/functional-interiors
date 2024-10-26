@@ -11,7 +11,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
         'w-1/3',
         'fixed',
         'top-0',
-        'h-screen',
+        'h-full',
         'bg-white',
         'ease-in-out',
         'duration-300',
@@ -31,7 +31,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
         'fixed',
         'duration-300',
         'ease-in-out',
-        'h-screen',
+        'h-full',
         'w-screen',
         'bg-black',
         'transition-opacity',
@@ -66,11 +66,11 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
 
             <div
                 onClick={showMenu ? toggleMenu : undefined}
-                className={darkEffectCN}
+                className={`${darkEffectCN} z-40`}
                 style={{ pointerEvents: showMenu ? 'auto' : 'none' }}
             />
             <div
-                className={sideMenuCN}>
+                className={`${sideMenuCN} z-50`}>
                 <ul className="p-4">
                     <li>Home</li>
                     <li>About</li>

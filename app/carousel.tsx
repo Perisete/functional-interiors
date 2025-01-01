@@ -3,14 +3,15 @@ import React, {useEffect, useState} from "react";
 
 import "./carousel.css"
 
-// interface CarouselItem{
-//     children: string
-//     width: string
-// }
+interface CarouselItemProps {
+    children: React.ReactNode;
+    width?: string;
+    color?: string;
+}
 
-// interface Carousel{
-//     children: string
-// }
+interface CarouselProps {
+    children: React.ReactNode;
+}
 
 export const CarouselItem = ({ children, width, color }) => {
     return (
@@ -22,15 +23,10 @@ export const CarouselItem = ({ children, width, color }) => {
 
 const Carousel = ({ children }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const updateIndex = (newIndex) => {
-        if (newIndex < 0) {
-            newIndex = React.Children.count(children) - 1;
-        } else if (newIndex >= React.Children.count(children)) {
-            newIndex = 0;
-        }
-
-        setActiveIndex(newIndex);
-    }
+    const updateIndex = (newIndex: number): void => {
+        const childrenCount = React.Children.count(children);
+        setActiveIndex((newIndex + childrenCount) % childrenCount);
+    };    
     useEffect(() => {
         const interval = setInterval(() => {
             updateIndex(activeIndex + 1);
@@ -41,7 +37,7 @@ const Carousel = ({ children }) => {
                 clearInterval(interval);
             }
         };
-    });
+    }, [activeIndex]);
     return (
         <div className="carousel relative">
                 <div className="flex absolute bottom-0 inset-x-0 z-10 gap-2 place-content-center mb-4">

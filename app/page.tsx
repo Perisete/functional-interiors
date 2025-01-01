@@ -1,6 +1,7 @@
 import Image from "next/image";
 // import "./carousel.css";
-import Carousel, { CarouselItem } from "./carousel"
+import Carousel, { CarouselItem } from "./carousel";
+import TitleProp from "./ui/titles";
 
 interface ColorTextBoxesProps {
   title: string
@@ -19,7 +20,7 @@ const ColorTextBoxes = ({
 }: ColorTextBoxesProps) => (
   <div className="relative h-64 w-full">
     <img className="w-full pl-5 pr-5 h-full object-cover relative" src={`/${imgsrc}`} />
-    <div className={`${textpos === "left" ? "rounded-r-lg left-0" : "rounded-l-lg left-40"} bg-[${color}] absolute w-64 ml-0 top-40 border-dotted sm:rounded-r-lg sm:rounded-l-lg`} >
+    <div className={`${textpos === "left" ? "rounded-r-lg left-0" : "rounded-l-lg left-40"} absolute w-64 ml-0 top-40 border-dotted sm:rounded-r-lg sm:rounded-l-lg`} style={{ backgroundColor: color }} >
       <div className={`${textpos === "left" ? "text-right mr-3 pl-5" : "ml-3 pr-5"} mt-3 mb-3`}>
         <p className="font-bold">{title}</p>
         <p className="">{text}</p>
@@ -42,27 +43,26 @@ export default function Home() {
           <div className="aspect-w-16 aspect-h-9">
             <img className="object-fill h-full w-full" src="/3.jpg" />
           </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <img className="object-fill h-full w-full" src="/4.jpg" />
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <img className="object-fill h-full w-full" src="/5.webp" />
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <img className="object-fill h-full w-full" src="/6.webp" />
-          </div>
         </div>
-        <div>
-          <p className="sm:text-8xl text-3xl text-center text-[#4e5152]">You deserve a space that is</p>
-          <p className="sm:text-8xl text-3xl text-center text-[#4e5152]">beautiful and comfortable,</p>
-          <p className="sm:text-8xl text-3xl text-center text-[#4e5152]">but above all, functional!</p>
+        <div className="ml-3 flex grid grid-cols-12 gap-2 sm:gap-0 items-center h-full">
+          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:h-44 sm:w-24" />
+          <div className="col-span-9 ml-2">
+            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">You deserve a space that is</p>
+            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">beautiful and comfortable,</p>
+            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">but above all, functional!</p>
+          </div>
+          <div className="col-span-2 flex h-full mr-3 mb-3">
+            <div className="w-12 h-4 bg-[#0097b2] rounded-t-full mt-auto" />
+            <div className="w-6 h-8 bg-[#ffde59] rounded-r-full mt-auto" />
+          </div>
         </div>
       </div>
-      <div className="mb-10">
+      <TitleProp title="SERVICES" />
+      {/* <div className="mb-10">
         <p className="text-center sm:text-7xl text-xl text-[#4e5152]">SERVICES</p>
-      </div>
+      </div> */}
 
-      <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3 mt-10">
         <ColorTextBoxes
           title={"SPACE PLANNING"}
           text={"Not sure got to arrange your furniture? We can make your space work for your needs."}
@@ -85,10 +85,11 @@ export default function Home() {
           imgsrc={"3.jpg"} />
       </div>
 
-      <div className="mb-10">
+      {/* <div className="mb-10">
         <p className="text-center sm:text-7xl text-xl text-[#4e5152]">PROJECTS</p>
-      </div>
-      <div className="mb-5 ml-5 mr-5">
+      </div> */}
+      <TitleProp title="PROJECTS" />
+      <div className="mb-5 ml-5 mr-5 mt-10">
         <p className="font-bold">Multipurpose bedroom for a busy student</p>
         <p className="text-justify">This small bedroom serves many functions. It's a palce of rest, studying and tutoring, and a music room - all in less than 8m2! We transformed this space to comfortably fit all its needed functions.</p>
       </div>

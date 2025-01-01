@@ -15,7 +15,7 @@ export default function Header() {
         <SocialIcon url="https://tiktok.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' />
       </div>
       <div className='flex-1'>
-        <h1 className='sm:text-7xl text-3xl text-[#4e5152] text-center'>Functional Interiors</h1>
+        <h1 className='sm:text-7xl text-3xl text-[#4e5152] text-center'>functional interiors</h1>
       </div>
       <div className="hidden cursor-pointer sm:flex items-center gap-4">
         <p>ES</p>

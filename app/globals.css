@@ -16,20 +16,16 @@
 
 @font-face {
   font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: normal;
   src: url('/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat-ExtraBold';
+  font-family: 'Montserrat';
+  src: url('/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
-  font-weight: bolder;
-  src: url('/static/Montserrat-ExtraBold.ttf') format('truetype');
-}
-
-.title-service {
-  font-family: Montserrat-ExtraBold, sans-serif;
 }
 
 body {

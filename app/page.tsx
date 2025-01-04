@@ -2,32 +2,8 @@ import Image from "next/image";
 // import "./carousel.css";
 import Carousel, { CarouselItem } from "./carousel";
 import TitleProp from "./ui/titles";
-
-interface ColorTextBoxesProps {
-  title: string
-  text: string
-  textpos: 'left' | 'right'
-  color: string
-  imgsrc: string
-}
-
-const ColorTextBoxes = ({
-  title,
-  text,
-  textpos,
-  color,
-  imgsrc
-}: ColorTextBoxesProps) => (
-  <div className="relative h-64 w-full">
-    <img className="w-full pl-5 pr-5 h-full object-cover relative" src={`/${imgsrc}`} />
-    <div className={`${textpos === "left" ? "rounded-r-lg left-0" : "rounded-l-lg left-40"} absolute w-64 ml-0 top-40 border-dotted sm:rounded-r-lg sm:rounded-l-lg`} style={{ backgroundColor: color }} >
-      <div className={`${textpos === "left" ? "text-right mr-3 pl-5" : "ml-3 pr-5"} mt-3 mb-3`}>
-        <p className="font-bold">{title}</p>
-        <p className="">{text}</p>
-      </div>
-    </div>
-  </div>
-);
+import ColorTextBox from "./ui/color_text_box";
+import Form from "./ui/form";
 
 export default function Home() {
   return (
@@ -57,44 +33,50 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <TitleProp title="SERVICES" />
-      {/* <div className="mb-10">
-        <p className="text-center sm:text-7xl text-xl text-[#4e5152]">SERVICES</p>
-      </div> */}
+      <TitleProp
+        title="SERVICES"
+        first_color="#0097b2"
+        second_color="#80b26d" />
 
       <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3 mt-10">
-        <ColorTextBoxes
-          title={"SPACE PLANNING"}
-          text={"Not sure got to arrange your furniture? We can make your space work for your needs."}
+        <ColorTextBox
+          title={"DESIGN CONSULTATION"}
+          text={"Struggling to make choices in your design, and want support? Resolve all doubts with us!"}
           textpos="right"
-          color={"#caf4ae"}
-          imgsrc={"3.jpg"} />
+          color={"#c3dfb8"}
+          imgsrc={"3.jpg"}
+          cicrle_text="MORE INFO"
+          circle_color="#ffde59" />
 
-        <ColorTextBoxes
-          title={"INTERIOR DESIGN"}
-          text={"Struggling to come up with a coherent vision for your home? With us, from vision to plan."}
+        <ColorTextBox
+          title={"ROOM DESIGN"}
+          text={"Wondering how to achieve your style and maximize your space? Let's create your dream home!"}
           textpos="left"
-          color={"#f4daae"}
-          imgsrc={"1.jpg"} />
+          color={"#fff0b6"}
+          imgsrc={"1.jpg"}
+          cicrle_text="MORE INFO"
+          circle_color="#0097b2" />
 
-        <ColorTextBoxes
-          title={"FURNITURE SOURCING"}
-          text={"Are you overwhelmed by endless options? Let us make your choices easier."}
+        <ColorTextBox
+          title={"ROOM DESIGN - PREMIUM"}
+          text={"Not sure where to even start? We'll help you visualize your future home with ease!"}
           textpos="right"
-          color={"#aed7f4"}
-          imgsrc={"3.jpg"} />
+          color={"#acd1d8"}
+          imgsrc={"3.jpg"}
+          cicrle_text="MORE INFO"
+          circle_color="#80b26d" />
       </div>
 
-      {/* <div className="mb-10">
-        <p className="text-center sm:text-7xl text-xl text-[#4e5152]">PROJECTS</p>
-      </div> */}
-      <TitleProp title="PROJECTS" />
+      <TitleProp 
+        title="PROJECTS"
+        first_color="#80b26d"
+        second_color="#ffde59" />
       <div className="mb-5 ml-5 mr-5 mt-10">
         <p className="font-bold">Multipurpose bedroom for a busy student</p>
         <p className="text-justify">This small bedroom serves many functions. It's a palce of rest, studying and tutoring, and a music room - all in less than 8m2! We transformed this space to comfortably fit all its needed functions.</p>
       </div>
 
-      <div className="mb-5">
+      <div className="mb-10">
         <Carousel>
           <CarouselItem>
             <Image
@@ -115,42 +97,64 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className="mb-5 ml-5 mr-5">
-        <p className="font-bold">Renter-friendly living and dining room design</p>
-        <p className="text-justify">What to do when none of the furniture is yours to change? We adjusted the layout to the client's needs, and added her style with renter and budget-friendly decorations!</p>
+      <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3 mt-10">
+        <ColorTextBox
+          title={"BUSY STUDENT ROOM"}
+          text={"Bedroom, office, and music room - can everything fit comfortably in 8m²"}
+          textpos="right"
+          color={"#acd1d8"}
+          imgsrc={"4.jpg"}
+          cicrle_text="SEE MORE"
+          circle_color="#80b26d" />
+
+        <ColorTextBox
+          title={"ROOM DESIGN"}
+          text={"Wondering how to achieve your style and maximize your space? Let's create your dream home!"}
+          textpos="left"
+          color={"#c3dfb8"}
+          imgsrc={"8.jpg"}
+          cicrle_text="SEE MORE"
+          circle_color="#ffde59" />
+
+        <ColorTextBox
+          title={"ROOM DESIGN - PREMIUM"}
+          text={"Not sure where to even start? We'll help you visualize your future home with ease!"}
+          textpos="right"
+          color={"#fff0b6"}
+          imgsrc={"7.jpeg"}
+          cicrle_text="SEE MORE"
+          circle_color="#0097b2" />
       </div>
 
-      <div className="mb-5">
-        <Carousel>
-          <CarouselItem>
-            <Image
-              src="/2.jpg"
-              width={500}
-              height={500}
-              alt=""
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <Image
-              src="/3.jpg"
-              width={500}
-              height={500}
-              alt=""
-            />
-          </CarouselItem>
-        </Carousel>
+      <TitleProp 
+        title="COMMON QUESTIONS"
+        first_color="#ffde59"
+        second_color="#0097b2" />
+
+      <div className="mb-10 ml-5 mr-5 mt-10">
+        <p className="font-bold">Which service should I chose?</p>
+        <ul className="list-disc ml-7">
+          <li>blablabla</li>
+          <li>blablabla</li>
+          <li>blablabla</li>
+        </ul>
+        <p className="font-bold mt-5">What to expect?</p>
+        <ul className="list-disc ml-7">
+          <li>We'll require pictures of your space, as well as a current floor plan with measurements. Don't worry, this can be a digital drawing, or just sketched by you!</li>
+          <li>In the initial videocall, we'll discuss the issues you have in the space, as well as your needs and wants for the design.</li>
+          <li>After receiving the design documents via e-mail, you'll have a chance to discuss the designer's choices in a final videocall, and ask for revisions if needed. Or maybe you'll decide you'd like another service too!</li>
+        </ul>
       </div>
+
+      <TitleProp 
+        title="CONTACT US!"
+        first_color="#80b26d"
+        second_color="#ffde59"
+        subtitle="Do you have any questions, or would you like a different service? Let us know!" />
+      <div className="mb-10 ml-5 mr-5 mt-10">
+        <Form />
+      </div>
+
     </main>
   );
 }
-
-{/* 
-      <div className="pr-5 mt-10 relative h-64 w-full">
-        <img className="pl-5 w-full h-full object-cover" src="/1.jpg" />
-        <div className="bg-[#f4daae] w-64 ml-0 rounded-r-lg absolute top-40 border-dotted">
-          <div className="mt-3 mb-3 mr-3 text-right">
-            <p className="font-bold">INTERIOR DESIGN</p>
-            <p>Struggling to come up with a coherent vision for your home? With us, a vision becomes a plan.</p>
-          </div>
-        </div>
-      </div> */}

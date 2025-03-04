@@ -45,8 +45,9 @@ export default function Home() {
           textpos="right"
           color={"#c3dfb8"}
           imgsrc={"3.jpg"}
-          cicrle_text="MORE INFO"
-          circle_color="#ffde59" />
+          circle_text="MORE INFO"
+          circle_color="#ffde59"
+          link="design_consultation" />
 
         <ColorTextBox
           title={"ROOM DESIGN"}
@@ -54,7 +55,7 @@ export default function Home() {
           textpos="left"
           color={"#fff0b6"}
           imgsrc={"1.jpg"}
-          cicrle_text="MORE INFO"
+          circle_text="MORE INFO"
           circle_color="#0097b2" />
 
         <ColorTextBox
@@ -63,8 +64,9 @@ export default function Home() {
           textpos="right"
           color={"#acd1d8"}
           imgsrc={"3.jpg"}
-          cicrle_text="MORE INFO"
-          circle_color="#80b26d" />
+          circle_text="MORE INFO"
+          circle_color="#80b26d"
+          link="room_design_premium" />
       </div>
 
       <TitleProp 
@@ -104,25 +106,25 @@ export default function Home() {
           textpos="right"
           color={"#acd1d8"}
           imgsrc={"4.jpg"}
-          cicrle_text="SEE MORE"
+          circle_text="SEE MORE"
           circle_color="#80b26d" />
 
         <ColorTextBox
-          title={"ROOM DESIGN"}
-          text={"Wondering how to achieve your style and maximize your space? Let's create your dream home!"}
+          title={"ELEGANT COZY LIVING ROOM"}
+          text={"Relaxing and natural feeling, right in the comfort of home. Could it work in your space?"}
           textpos="left"
           color={"#c3dfb8"}
           imgsrc={"8.jpg"}
-          cicrle_text="SEE MORE"
+          circle_text="SEE MORE"
           circle_color="#ffde59" />
 
         <ColorTextBox
-          title={"ROOM DESIGN - PREMIUM"}
-          text={"Not sure where to even start? We'll help you visualize your future home with ease!"}
+          title={"SOPHISTICATED RECEPTION"}
+          text={"Clean and sophisticated, but welcoming reception area. Your guests will feel right at home!"}
           textpos="right"
           color={"#fff0b6"}
           imgsrc={"7.jpeg"}
-          cicrle_text="SEE MORE"
+          circle_text="SEE MORE"
           circle_color="#0097b2" />
       </div>
 

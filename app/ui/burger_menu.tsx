@@ -71,10 +71,12 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
             />
             <div
                 className={`${sideMenuCN} z-50`}>
-                <ul className="p-4">
+                <ul className="p-4 space-y-3">
                     <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>Common questions</li>
+                    <li>Contact us!</li>
                 </ul>
             </div>
         </div >

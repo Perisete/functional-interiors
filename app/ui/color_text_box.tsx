@@ -22,7 +22,7 @@ export const ColorTextBox = ({
   link
 }: ColorTextBoxProps) => (
 <div className="relative h-64 flex">
-    <img className="w-full pl-5 pr-5 h-full z-0 absolute" src={`/${imgsrc}`} />
+    <img className="w-full pl-5 pr-5 h-full z-0 absolute rounded-lg" src={`/${imgsrc}`} />
     <div className={`h-full w-full z-10 flex justify-end ${textpos === "left" ? "flex-row-reverse" : ""} items-center mt-14`}>
         <div className={`bg-[${circle_color}] flex items-center justify-center ${textpos === "left" ? "w-8 h-16 rounded-r-full " : "w-8 h-16 rounded-l-full"}`}>
             {/* TODO: make link the whole circle */}

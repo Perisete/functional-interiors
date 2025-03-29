@@ -9,27 +9,27 @@ export default function Home() {
   return (
     <main>
       <div className="bg-[#f1f1f1] mb-10 pb-10">
-        <div className="columns-6 flex mb-10 h-36 sm:columns-3">
-          <div>
-            <img className="object-fill h-full w-full" src="/1.jpg" />
+        <div className="flex justify-between gap-2 mb-10 px-4 h-36 sm:px-8 sm:h-64">
+          <div className="flex-1">
+            <img className="object-cover h-full w-full" src="/1.jpg" alt="" />
           </div>
-          <div className="aspect-w-16 aspect-h-9 ">
-            <img className="object-fill h-full w-full" src="/2.jpg" />
+          <div className="flex-1">
+            <img className="object-cover h-full w-full" src="/2.jpg" alt="" />
           </div>
-          <div className="aspect-w-16 aspect-h-9">
-            <img className="object-fill h-full w-full" src="/3.jpg" />
+          <div className="flex-1">
+            <img className="object-cover h-full w-full" src="/3.jpg" alt="" />
           </div>
         </div>
-        <div className="ml-3 flex grid grid-cols-12 gap-2 sm:gap-0 items-center h-full">
-          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:h-44 sm:w-24" />
-          <div className="col-span-9 ml-2">
-            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">You deserve a space that is</p>
-            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">beautiful and comfortable,</p>
-            <p className="sm:text-8xl text-2xl text-center text-[#4e5152] whitespace-nowrap">but above all, functional!</p>
+        <div className="ml-3 grid grid-cols-12 gap-2 items-center h-full sm:gap-0 sm:ml-32 sm:mr-12 sm:grid-cols-12">
+          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:col-span-2 sm:h-44 sm:w-24" />
+          <div className="col-span-9 ml-2 sm:col-span-8">
+            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">You deserve a space that is</p>
+            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">beautiful and comfortable,</p>
+            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">but above all, functional!</p>
           </div>
-          <div className="col-span-2 flex h-full mr-3 mb-3">
-            <div className="w-12 h-4 bg-[#0097b2] rounded-t-full mt-auto" />
-            <div className="w-6 h-8 bg-[#ffde59] rounded-r-full mt-auto" />
+          <div className="col-span-2 flex h-full mr-3 mb-3 sm:col-span-2">
+            <div className="w-12 h-4 bg-[#0097b2] rounded-t-full mt-auto sm:w-24 sm:h-12" />
+            <div className="w-6 h-8 bg-[#ffde59] rounded-r-full mt-auto sm:w-12 sm:h-24" />
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Home() {
           link="room_design_premium" />
       </div>
 
-      <TitleProp 
+      <TitleProp
         title="PROJECTS"
         first_color="#80b26d"
         second_color="#ffde59" />
@@ -128,7 +128,7 @@ export default function Home() {
           circle_color="#0097b2" />
       </div>
 
-      <TitleProp 
+      <TitleProp
         title="COMMON QUESTIONS"
         first_color="#ffde59"
         second_color="#0097b2" />
@@ -148,7 +148,7 @@ export default function Home() {
         </ul>
       </div>
 
-      <TitleProp 
+      <TitleProp
         title="CONTACT US!"
         first_color="#80b26d"
         second_color="#ffde59"

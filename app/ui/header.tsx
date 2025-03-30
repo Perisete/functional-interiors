@@ -2,6 +2,7 @@ import { SocialIcon } from 'react-social-icons';
 import BurgerMenu from './burger_menu';
 import Image from 'next/image';
 import Link from 'next/link';
+import FullLogo from '@/public/logos/full_logo.svg';
 
 export default function Header() {
   return (
@@ -19,12 +20,10 @@ export default function Header() {
       <div className='col-span-9 flex justify-center items-center'>
         <Link href="/">
           <Image
-            src="/logo.png"
+            src={FullLogo}
             alt="Functional Interiors"
-            width={280}
-            height={300}
-            layout="intrinsic"
-            className="mx-auto sm:w-[500px] sm:h-[550px]"
+            className="w-auto h-6 sm:h-14"
+            priority
           />
         </Link>
       </div>

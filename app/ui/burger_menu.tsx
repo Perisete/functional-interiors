@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from '@/public/logos/logo.svg';
 
 export default function BurgerMenu({ position }: { position: 'left' | 'right' }) {
     const [showMenu, setShowMenu] = useState(false);
@@ -87,14 +88,27 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
             />
             <div
                 className={`${sideMenuCN} z-50`}>
+                <div
+                    onClick={toggleMenu}
+                    className="absolute top-4 right-4 cursor-pointer">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-20 w-7"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="black">
+                            <line x1="0" y1="0" x2={20} y2="0"/>
+                            <line x1={20} y1={0} x2={12} y2={12}/>
+                            <line x1={20} y1={0} x2={12} y2={-12}/>
+                        </svg>
+                    </div>
                 <div className='flex items-center justify-center pt-4'>
                     <Image
-                    src="/logo_short.png"
-                    alt="Functional Interiors Logo"
-                    width={50}
-                    height={50}
-                    className=""
-                />
+                        src={Logo}
+                        alt="Functional Interiors Logo"
+                        priority
+                        className="w-auto h-16 sm:h-24 mt-5 mb-5"
+                    />
                 </div>
                 <ul className="p-4 space-y-8 text-lg">
                     <li>
@@ -130,7 +144,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                 </ul>
                 <div className="absolute bottom-0 w-full p-4 text-center text-sm text-gray-500">
                     <hr className="mb-5"/>
-                    <p>© 2024 Functional Interiors</p>
+                    <p>© 2025 Functional Interiors</p>
                     <p>All rights reserved</p>
                 </div>
             </div>

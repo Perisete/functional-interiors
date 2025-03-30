@@ -2,6 +2,7 @@ import TitleProp from "@/app/ui/titles";
 import Header from "@/app/ui/header";
 import Image from 'next/image';
 import Link from "next/link";
+import { SemicircleLink } from "@/app/ui/semicircle_link";
 
 export default function DesignConsultation() {
     return (
@@ -31,13 +32,12 @@ export default function DesignConsultation() {
                             </ul>
                         </div>
                     </div>
-                    <div className="mt-5 ml-8">
-                        <Link href="/">
-                            <div className={`w-20 h-10 bg-[#ffde59] rounded-b-full font-bold sm:text-[18px] sm:w-24 sm:h-12`}>
-                                <p className="text-center sm:mr-3 sm:ml-3 sm:leading-5">Book now!</p>
-                            </div>
-                        </Link>
-                    </div>
+
+                    <SemicircleLink
+                        link={"/"}
+                        circle_text={"Book now!"}
+                        circle_color={"#ffde59"}
+                        position="left" />
 
 
                 </div>

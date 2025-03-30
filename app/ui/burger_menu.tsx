@@ -1,14 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BurgerMenu({ position }: { position: 'left' | 'right' }) {
     const [showMenu, setShowMenu] = useState(false);
 
+    useEffect(() => {
+        // Effect runs when showMenu changes
+        if (showMenu) {
+            // When menu is open, add class to body to prevent scroll
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // When menu is closed, remove class to restore scroll
+            document.body.classList.remove('overflow-hidden');
+        }
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [showMenu]); // 3. Dependency array: effect runs when showMenu changes
+    
     const sideMenuCN = classNames(
         'sm:w-1/6',
-        'w-1/3',
+        'w-1/2',
         'fixed',
         'top-0',
         'h-full',
@@ -22,7 +38,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
             '-translate-x-full': !showMenu,
             'sm:right-0': position == 'right',
             'left-0': position == 'left'
-        } 
+        }
     )
 
     const darkEffectCN = classNames(
@@ -71,13 +87,52 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
             />
             <div
                 className={`${sideMenuCN} z-50`}>
-                <ul className="p-4 space-y-3">
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Common questions</li>
-                    <li>Contact us!</li>
+                <div className='flex items-center justify-center pt-4'>
+                    <Image
+                    src="/logo_short.png"
+                    alt="Functional Interiors Logo"
+                    width={50}
+                    height={50}
+                    className=""
+                />
+                </div>
+                <ul className="p-4 space-y-8 text-lg">
+                    <li>
+                        <div className="flex items-center">
+                            <div className="w-3 h-5 rounded-l-full bg-[#0097b2] mr-2" />
+                            <Link href="/">Home</Link>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="flex items-center">
+                            <div className="w-3 h-5 rounded-l-full bg-[#ffde59] mr-2" />
+                            <Link href="/">Services</Link>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="flex items-center">
+                            <div className="w-3 h-5 rounded-l-full bg-[#80b26d] mr-2" />
+                            <Link href="/">Projects</Link>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="flex items-center">
+                            <div className="w-3 h-5 rounded-l-full bg-[#0097b2] mr-2" />
+                            <Link href="/">Common questions</Link>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="flex items-center">
+                            <div className="w-3 h-5 rounded-l-full bg-[#ffde59] mr-2" />
+                            <Link href="/">Contact us!</Link>
+                        </div>
+                    </li>
                 </ul>
+                <div className="absolute bottom-0 w-full p-4 text-center text-sm text-gray-500">
+                    <hr className="mb-5"/>
+                    <p>© 2024 Functional Interiors</p>
+                    <p>All rights reserved</p>
+                </div>
             </div>
         </div >
     );

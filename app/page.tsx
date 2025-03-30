@@ -8,28 +8,28 @@ import Form from "./ui/form";
 export default function Home() {
   return (
     <main>
-      <div className="bg-[#f1f1f1] mb-10 pb-10">
-        <div className="flex justify-between gap-2 mb-10 px-4 h-36 sm:px-8 sm:h-64">
-          <div className="flex-1">
+      <div className="pl-3 pr-3 pb-10">
+        <div className="grid grid-cols-3 justify-between gap-2 mb-10">
+          <div className="col-span-1">
             <img className="object-cover h-full w-full" src="/1.jpg" alt="" />
           </div>
-          <div className="flex-1">
+          <div className="col-span-1">
             <img className="object-cover h-full w-full" src="/2.jpg" alt="" />
           </div>
-          <div className="flex-1">
+          <div className="col-span-1">
             <img className="object-cover h-full w-full" src="/3.jpg" alt="" />
           </div>
         </div>
-        <div className="ml-3 grid grid-cols-12 gap-2 items-center h-full sm:gap-0 sm:ml-32 sm:mr-12 sm:grid-cols-12">
-          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:col-span-2 sm:h-44 sm:w-24" />
-          <div className="col-span-9 ml-2 sm:col-span-8">
-            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">You deserve a space that is</p>
-            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">beautiful and comfortable,</p>
-            <p className="text-2xl text-center text-[#4e5152] whitespace-nowrap sm:text-7xl sm:text-left">but above all, functional!</p>
+        <div className="grid grid-cols-12 items-center sm:px-24"> {/* Working */}
+          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:h-36 sm:w-20" />
+          <div className="text-[#4e5152] whitespace-nowrap text-2xl col-span-9 pl-2 sm:text-7xl">
+            <h1>You deserve a space that is<br />
+            beautiful and comfortable,<br />
+            but above all, functional!</h1>
           </div>
-          <div className="col-span-2 flex h-full mr-3 mb-3 sm:col-span-2">
-            <div className="w-12 h-4 bg-[#0097b2] rounded-t-full mt-auto sm:w-24 sm:h-12" />
-            <div className="w-6 h-8 bg-[#ffde59] rounded-r-full mt-auto sm:w-12 sm:h-24" />
+          <div className="col-span-2 flex flex-row items-end justify-end self-end relative bottom-2">
+            <div className="w-8 h-4 bg-[#0097b2] rounded-t-full sm:w-32 sm:h-16" />
+            <div className="w-4 h-8 bg-[#ffde59] rounded-r-full sm:w-16 sm:h-32" />
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function Home() {
         first_color="#0097b2"
         second_color="#80b26d" />
 
-      <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3 mt-10">
+      <div className="grid grid-rows-3 gap-10 mb-10 sm:pl-0 sm:grid-cols-3 mt-10">
         <ColorTextBox
           title={"DESIGN CONSULTATION"}
           text={"Struggling to make choices in your design, and want support? Resolve all doubts with us!"}
@@ -73,7 +73,7 @@ export default function Home() {
         title="PROJECTS"
         first_color="#80b26d"
         second_color="#ffde59" />
-      <div className="mb-5 ml-5 mr-5 mt-10">
+      <div className="mx-5 mt-10">
         <p className="font-bold">Multipurpose bedroom for a busy student</p>
         <p className="text-justify">This small bedroom serves many functions. It's a palce of rest, studying and tutoring, and a music room - all in less than 8m2! We transformed this space to comfortably fit all its needed functions.</p>
       </div>
@@ -99,7 +99,7 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className="grid grid-cols-1 gap-10 mb-16 sm:pl-0 sm:grid-cols-3 mt-10">
+      <div className="grid grid-cols-1 gap-10 mb-10 sm:pl-0 sm:grid-cols-3 mt-10">
         <ColorTextBox
           title={"BUSY STUDENT ROOM"}
           text={"Bedroom, office, and music room - can everything fit comfortably in 8m²"}

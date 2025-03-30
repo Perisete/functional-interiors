@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className="pt-5 pb-5 gap-8 bg-[#f1f1f1] items-center grid-cols-12 flex sm:justify-between sm:pb-10 sm:pt-10 sm:pl-10 sm:pr-10">
+    <div className="pt-5 pb-5 gap-8 items-center grid-cols-12 flex sm:justify-between sm:pb-10 sm:pt-10 sm:pl-10 sm:pr-10">
       <div className='sm:hidden ml-3 col-span-3'>
         <BurgerMenu position='left' />
       </div>
       <div className='sm:gap-6 hidden sm:flex'>
-        <SocialIcon url="https://x.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
-        <SocialIcon url="https://instagram.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
-        <SocialIcon url="https://facebook.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
-        <SocialIcon url="https://pinterest.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
-        <SocialIcon url="https://tiktok.com/" bgColor='#f1f1f1' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://x.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://instagram.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://facebook.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://pinterest.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://tiktok.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
       </div>
       <div className='col-span-9 flex justify-center items-center'>
         <Link href="/">

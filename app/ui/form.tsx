@@ -76,7 +76,7 @@ export const Form = () => {
             <div className="flex justify-end">
                 <button
                     type="submit"
-                    className={`w-20 h-10 bg-[${submit_color}] rounded-b-full`}
+                    className={`mt-2 w-20 h-10 bg-[${submit_color}] rounded-b-full`}
                 >
                     <p className="font-bold text-xs">CONTACT US</p>
                 </button>

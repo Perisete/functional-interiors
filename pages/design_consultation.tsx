@@ -1,8 +1,7 @@
 import TitleProp from "@/app/ui/titles";
 import Header from "@/app/ui/header";
 import Image from 'next/image';
-import Link from "next/link";
-import { SemicircleLink } from "@/app/ui/semicircle_link";
+import Form from "@/app/ui/form";
 
 export default function DesignConsultation() {
     return (
@@ -12,8 +11,8 @@ export default function DesignConsultation() {
             <div className="mt-10 mb-10">
                 <TitleProp
                     title="DESIGN CONSULTATION"
-                    first_color="#0097b2"
-                    second_color="#80b26d" />
+                    first_color="blue"
+                    second_color="green" />
             </div>
             <div className="grid grid-cols-12 gap-1 ml-5 mr-10 mb-10 sm:ml-32 sm:mr-32">
                 <div className="col-span-9">
@@ -23,7 +22,7 @@ export default function DesignConsultation() {
                             Then this is the service for you!
                         </p>
                     </div>
-                    <div className="ml-8 mr-5">
+                    <div className="ml-8 mr-5 mb-10">
                         <div>
                             <ul className="list-disc">
                                 <li>60 min video call for general advice and suggestions for your space(s).</li>
@@ -33,17 +32,21 @@ export default function DesignConsultation() {
                         </div>
                     </div>
 
-                    <SemicircleLink
-                        link={"/"}
-                        circle_text={"Book now!"}
-                        circle_color={"#ffde59"}
-                        position="left" />
+                    <Form 
+                        subtitle={
+                            <>
+                                The price of the 60 min consultation with the designer is 40€.<br />
+                                You will receive a link via e-mail to schedule the call.<br />
+                                You can provide photos, floor plans and additional comments, but it is not necessary.
+                            </>
+                        }
+                    />
 
 
                 </div>
                 <div className="flex items-center justify-center col-span-3">
                     <Image
-                        src="/8.jpg"
+                        src="/images/8.jpg"
                         alt="Room Design Premium"
                         width={400}
                         height={400}

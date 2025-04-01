@@ -22,7 +22,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
             document.body.classList.remove('overflow-hidden');
         };
     }, [showMenu]); // 3. Dependency array: effect runs when showMenu changes
-    
+
     const sideMenuCN = classNames(
         'sm:w-1/6',
         'w-1/2',
@@ -90,18 +90,22 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                 className={`${sideMenuCN} z-50`}>
                 <div
                     onClick={toggleMenu}
-                    className="absolute top-4 right-4 cursor-pointer">
+                    className={`relative cursor-pointer
+                    ${position === 'right' ? 'top-3 left-2' : 'top-3 right-2 place-self-end'}`}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-20 w-7"
+                        className="h-7 w-7"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke="black">
-                            <line x1="0" y1="0" x2={20} y2="0"/>
-                            <line x1={20} y1={0} x2={12} y2={12}/>
-                            <line x1={20} y1={0} x2={12} y2={-12}/>
-                        </svg>
-                    </div>
+                        stroke="currentColor">
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d={position === 'right' ? "M15 19l-7-7 7-7" : "M9 19l7-7-7-7"}
+                        />
+                    </svg>
+                </div>
                 <div className='flex items-center justify-center pt-4'>
                     <Image
                         src={Logo}
@@ -131,7 +135,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                     </li>
                     <li>
                         <div className="flex items-center">
-                            <div className="w-3 h-5 rounded-l-full bg-[#0097b2] mr-2" />
+                            <div className="w-3 h-5 rounded-l-full bg-[#0097b2] mr-2 flex-shrink-0" />
                             <Link href="/">Common questions</Link>
                         </div>
                     </li>
@@ -143,7 +147,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                     </li>
                 </ul>
                 <div className="absolute bottom-0 w-full p-4 text-center text-sm text-gray-500">
-                    <hr className="mb-5"/>
+                    <hr className="mb-5" />
                     <p>© 2025 Functional Interiors</p>
                     <p>All rights reserved</p>
                 </div>

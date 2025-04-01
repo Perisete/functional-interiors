@@ -1,6 +1,10 @@
-import React from 'react'; // Make sure React is imported if not implicitly available
+import React from 'react'; 
 
 const submit_color = "#0097b2";
+
+interface FormProp {
+    subtitle?: string;
+}
 
 // --- DATA STRUCTURE (Provided by you) ---
 interface FormField {
@@ -30,74 +34,78 @@ const fileInputStyles = `block w-full text-sm text-gray-900 border border-gray-3
                          file:bg-[#0097b2] file:text-black hover:opacity-90 transition-opacity`;
 // --- END STYLE DEFINITIONS ---
 
-export const Form = () => {
+
+export const FormProp = ({subtitle}: FormProp) => {
     return (
         // Added max-width and centering for better form appearance
-        <form className="flex flex-col items-center justify-center w-full max-w-xl mx-auto">
-            {/* Container for the fields, controls vertical spacing and width */}
-            {/* Adjusted space-y and removed sm:w-xl, added w-full */}
-            <div className="space-y-6 w-full">
+        <div className='w-full max-w-xl mx-auto'>
+            <h3 className="mb-3">{subtitle}</h3>
+            <form className="flex flex-col items-center justify-center">
+                {/* Container for the fields, controls vertical spacing and width */}
+                {/* Adjusted space-y and removed sm:w-xl, added w-full */}
+                <div className="space-y-6 w-full">
 
-                {/* --- Loop through formFields array --- */}
-                {formFields.map((field) => (
-                    <div key={field.id}> {/* Use a unique key for each item */}
-                        <label htmlFor={field.id} className="block text-sm font-medium text-gray-700">
-                            {field.label}{field.required ? '*' : ''} {/* Display label and asterisk if required */}
-                        </label>
-                        <div className="mt-1">
-                            {/* Render INPUT element */}
-                            {field.elementType === 'input' && (
-                                <input
-                                    type={field.type}
-                                    name={field.name}
-                                    id={field.id}
-                                    autoComplete={field.autoComplete}
-                                    required={field.required} // Apply required attribute
-                                    className={textInputStyles} // Apply specific styles
+                    {/* --- Loop through formFields array --- */}
+                    {formFields.map((field) => (
+                        <div key={field.id}> {/* Use a unique key for each item */}
+                            <label htmlFor={field.id} className="block text-sm font-medium text-gray-700">
+                                {field.label}{field.required ? '*' : ''} {/* Display label and asterisk if required */}
+                            </label>
+                            <div className="mt-1">
+                                {/* Render INPUT element */}
+                                {field.elementType === 'input' && (
+                                    <input
+                                        type={field.type}
+                                        name={field.name}
+                                        id={field.id}
+                                        autoComplete={field.autoComplete}
+                                        required={field.required} // Apply required attribute
+                                        className={textInputStyles} // Apply specific styles
                                     // placeholder={field.placeholder} // Add if you include placeholder in FormField
-                                />
-                            )}
-                            {/* Render TEXTAREA element */}
-                            {field.elementType === 'textarea' && (
-                                <textarea
-                                    id={field.id}
-                                    name={field.name}
-                                    rows={field.rows}
-                                    maxLength={field.maxLength}
-                                    required={field.required} // Apply required attribute
-                                    style={{ resize: "none" }} // Keep inline style if needed
-                                    className={textareaStyles} // Apply specific styles
+                                    />
+                                )}
+                                {/* Render TEXTAREA element */}
+                                {field.elementType === 'textarea' && (
+                                    <textarea
+                                        id={field.id}
+                                        name={field.name}
+                                        rows={field.rows}
+                                        maxLength={field.maxLength}
+                                        required={field.required} // Apply required attribute
+                                        style={{ resize: "none" }} // Keep inline style if needed
+                                        className={textareaStyles} // Apply specific styles
                                     // placeholder={field.placeholder} // Add if you include placeholder in FormField
-                                />
-                            )}
-                            {/* Render FILE input element */}
-                            {field.elementType === 'file' && (
-                                <input
-                                    type="file"
-                                    name={field.name}
-                                    id={field.id}
-                                    required={field.required} // Apply required attribute
-                                    className={fileInputStyles} // Apply specific styles
-                                    multiple // Allow multiple file uploads if needed
-                                />
-                            )}
+                                    />
+                                )}
+                                {/* Render FILE input element */}
+                                {field.elementType === 'file' && (
+                                    <input
+                                        type="file"
+                                        name={field.name}
+                                        id={field.id}
+                                        required={field.required} // Apply required attribute
+                                        className={fileInputStyles} // Apply specific styles
+                                        multiple // Allow multiple file uploads if needed
+                                    />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
-                {/* --- End loop --- */}
+                    ))}
+                    {/* --- End loop --- */}
 
-            </div>
-    
-            <div className="flex justify-end w-full">
-                <button
-                    type="submit"
-                    className={`mt-2 w-20 h-10 bg-[${submit_color}] rounded-b-full font-bold text-xs hover:opacity-90 transition-opacity`}
-                >
-                    CONTACT US
-                </button>
-            </div>
-        </form>
+                </div>
+
+                <div className="flex justify-end w-full">
+                    <button
+                        type="submit"
+                        className={`mt-2 w-20 h-10 bg-[${submit_color}] rounded-b-full font-bold text-xs hover:opacity-90 transition-opacity`}
+                    >
+                        CONTACT US
+                    </button>
+                </div>
+            </form>
+        </div>
     )
 }
 
-export default Form;
+export default FormProp;

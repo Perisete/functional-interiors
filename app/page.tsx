@@ -1,6 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import "./carousel.css";
-import Carousel, { CarouselItem } from "./carousel";
+// import Carousel, { CarouselItem } from "./carousel";
 import TitleProp from "./ui/titles";
 import ColorTextBox from "./ui/color_text_box";
 import Form from "./ui/form";
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-12 items-center justify-items-center sm:px-24">
-          <div className="col-span-1 w-8 h-16 bg-[#80b26d] rounded-l-full sm:h-36 sm:w-20" />
+          <div className="col-span-1 w-8 h-16 bg-brand-green rounded-l-full sm:h-36 sm:w-20" />
           <div className="text-[#4e5152] text-[21px] col-span-10 pl-2 
           sm:text-7xl">
             <h1>You deserve a space that is<br />
@@ -29,16 +29,16 @@ export default function Home() {
             but above all, functional!</h1>
           </div>
           <div className="col-span-1 flex flex-row items-end justify-end self-end relative bottom-2 right-4">
-            <div className="w-8 h-4 bg-[#0097b2] rounded-t-full sm:w-32 sm:h-16" />
-            <div className="w-4 h-8 bg-[#ffde59] rounded-r-full sm:w-16 sm:h-32" />
+            <div className="w-8 h-4 bg-brand-blue rounded-t-full sm:w-32 sm:h-16" />
+            <div className="w-4 h-8 bg-brand-yellow rounded-r-full sm:w-16 sm:h-32" />
           </div>
         </div>
       </div>
       <div className="sm:mx-20">
         <TitleProp
           title="SERVICES"
-          first_color="#0097b2"
-          second_color="#80b26d" />
+          first_color="blue"
+          second_color="green" />
 
         <div className="grid grid-rows-3 gap-10 mb-10 mt-10
                         sm:pl-0 sm:grid-cols-3 sm:grid-rows-1">
@@ -46,36 +46,36 @@ export default function Home() {
             title={"DESIGN CONSULTATION"}
             text={"Struggling to make choices in your design, and want support? Resolve all doubts with us!"}
             textpos="right"
-            color={"#c3dfb8"}
+            color={"lightgreen"}
             imgsrc={"images/3.jpg"}
             circle_text="MORE INFO"
-            circle_color="#ffde59"
+            circle_color="yellow"
             link="design_consultation" />
 
           <ColorTextBox
             title={"ROOM DESIGN"}
             text={"Wondering how to achieve your style and maximize your space? Let's create your dream home!"}
             textpos="left"
-            color={"#fff0b6"}
+            color={"lightyellow"}
             imgsrc={"images/1.jpg"}
             circle_text="MORE INFO"
-            circle_color="#0097b2" />
+            circle_color="blue" />
 
           <ColorTextBox
             title={"ROOM DESIGN - PREMIUM"}
             text={"Not sure where to even start? We'll help you visualize your future home with ease!"}
             textpos="right"
-            color={"#acd1d8"}
+            color={"lightblue"}
             imgsrc={"images/3.jpg"}
             circle_text="MORE INFO"
-            circle_color="#80b26d"
+            circle_color="green"
             link="room_design_premium" />
         </div>
 
         <TitleProp
           title="PROJECTS"
-          first_color="#80b26d"
-          second_color="#ffde59" />
+          first_color="green"
+          second_color="yellow" />
 
         {/* <div className="mx-5 mt-10">
           <p className="font-bold">Multipurpose bedroom for a busy student</p>
@@ -107,34 +107,34 @@ export default function Home() {
             title={"BUSY STUDENT ROOM"}
             text={"Bedroom, office, and music room - can everything fit comfortably in 8m²"}
             textpos="right"
-            color={"#acd1d8"}
+            color={"lightblue"}
             imgsrc={"images/4.jpg"}
             circle_text="SEE MORE"
-            circle_color="#80b26d" />
+            circle_color="green" />
 
           <ColorTextBox
             title={"ELEGANT COZY LIVING ROOM"}
             text={"Relaxing and natural feeling, right in the comfort of home. Could it work in your space?"}
             textpos="left"
-            color={"#c3dfb8"}
+            color={"lightgreen"}
             imgsrc={"images/8.jpg"}
             circle_text="SEE MORE"
-            circle_color="#ffde59" />
+            circle_color="yellow" />
 
           <ColorTextBox
             title={"SOPHISTICATED RECEPTION"}
             text={"Clean and sophisticated, but welcoming reception area. Your guests will feel right at home!"}
             textpos="right"
-            color={"#fff0b6"}
+            color={"lightyellow"}
             imgsrc={"images/7.jpeg"}
             circle_text="SEE MORE"
-            circle_color="#0097b2" />
+            circle_color="blue" />
         </div>
 
         <TitleProp
           title="COMMON QUESTIONS"
-          first_color="#ffde59"
-          second_color="#0097b2" />
+          first_color="yellow"
+          second_color="blue" />
 
         <div className="mb-10 ml-5 mr-5 mt-10">
           <p className="font-bold">Which service should I chose?</p>
@@ -153,8 +153,8 @@ export default function Home() {
 
         <TitleProp
           title="CONTACT US!"
-          first_color="#80b26d"
-          second_color="#ffde59"
+          first_color="green"
+          second_color="yellow"
           subtitle="Do you have any questions, or would you like a different service? Let us know!" />
         <div className="mb-10 ml-5 mr-5 mt-10">
           <Form />

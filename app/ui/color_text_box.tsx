@@ -29,11 +29,9 @@ export const ColorTextBox = ({
         </div>
         <div className="relative -mt-16">
             <div
-                className={`p-5
+                className={`p-5 bg-brand-${color}
                 sm:rounded-3xl sm:left-0 sm:mr-32 sm:ml-0
-                ${textpos === "left" ? "rounded-r-3xl mr-32 left-0" : "rounded-l-3xl ml-32 right-0"}
-                `}
-                style={{ backgroundColor: color }}>
+                ${textpos === "left" ? "rounded-r-3xl mr-32 left-0" : "rounded-l-3xl ml-32 right-0"}`}>
                 <p className="font-bold text-[13px]">{title}</p>
                 <p className="text-[14px]">{text}</p>
             </div>

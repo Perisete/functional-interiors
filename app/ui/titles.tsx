@@ -10,16 +10,16 @@ export const TitleProp = ({ title, first_color, second_color, subtitle }: TitleP
     return (
         <div>
             <div className="flex justify-center">
-                <div className={`w-6 h-12 bg-[${first_color}] rounded-l-full flex-shrink-0`}></div>
+                <div className={`w-6 h-12 bg-brand-${first_color} rounded-l-full flex-shrink-0`}></div>
                 <div>
-                    <div className={`w-12 h-6 bg-[${second_color}] rounded-b-full`}></div>
+                    <div className={`w-12 h-6 bg-brand-${second_color} rounded-b-full`}></div>
                     <div className="ml-2">
-                        <h1 className="text-2xl font-extrabold title-service">{title}</h1>
+                        <h2 className="text-2xl font-extrabold title-service">{title}</h2>
                     </div>
                 </div>
             </div>
             <div className="justify-self-center ml-10 mr-10">
-                <h2 className="text-[10px] text-center">{subtitle}</h2>
+                <h3 className="text-center">{subtitle}</h3>
             </div>
         </div>
     );

@@ -12,7 +12,7 @@ export default function Header() {
       </div>
       <div className='sm:gap-6 hidden sm:flex'>
         <SocialIcon url="https://x.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
-        <SocialIcon url="https://instagram.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
+        <SocialIcon url="https://www.instagram.com/functionalinteriors/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
         <SocialIcon url="https://facebook.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
         <SocialIcon url="https://pinterest.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
         <SocialIcon url="https://tiktok.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />

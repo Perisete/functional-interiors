@@ -13,7 +13,7 @@ export const SemicircleLink = ({
     circle_color,
     position = "center"
 }: SemicircleLinkProps) => (
-    <div className={`bg-[${circle_color}] mt-1 w-20 h-10 px-4 rounded-b-full flex
+    <div className={`bg-brand-${circle_color} mt-1 w-20 h-10 px-4 rounded-b-full flex
         ${position === "left" ? "ml-6" : position === "center" ? "mx-auto" : "right-0"}`}>
     <Link href={`${link}`} className={`text-[10px] 
         font-bold text-center w-full h-full rounded-b-full

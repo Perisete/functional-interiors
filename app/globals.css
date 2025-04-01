@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #0a0a0a;
-  }
-}
-
 @font-face {
   font-family: 'Montserrat';
   src: url('/static/Montserrat-Regular.ttf') format('truetype');
@@ -28,14 +16,51 @@
   font-style: normal;
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Montserrat, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h3 {
+  font-size: 10px;
+}
+
+.bg-brand-lightyellow {
+  background-color: #fffae9;
+}
+.bg-brand-lightgreen {
+  background-color: #d6e1d2;
+}
+.bg-brand-lightblue {
+  background-color: #e6f1f4;
+}
+.bg-brand-yellow {
+  background-color: #ffde59;
+}
+.bg-brand-green {
+  background-color: #80b26d;
+}
+.bg-brand-blue {
+  background-color: #0097b2;
+}
+.bg-brand-darkyellow {
+  background-color: #80690e;
+}
+.bg-brand-darkgreen {
+  background-color: #47643b;
+}
+.bg-brand-darkblue {
+  background-color: #006679;
 }

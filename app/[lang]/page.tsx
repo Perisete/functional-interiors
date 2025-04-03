@@ -1,13 +1,18 @@
 // import Image from "next/image";
 // import "./carousel.css";
 // import Carousel, { CarouselItem } from "./carousel";
-import TitleProp from "./ui/titles";
-import ColorTextBox from "./ui/color_text_box";
-import Form from "./ui/form";
+import TitleProp from "../ui/titles";
+import ColorTextBox from "../ui/color_text_box";
+import Form from "../ui/form";
+import { getDictionary } from "./dictionaries";
 
-export default function Home() {
+type SupportedLocales = 'en' | 'es' | 'hr';
+
+export default async function Home({ params }: { params: { lang: SupportedLocales } }) {
+  const lang = params.lang;
+  const dict = await getDictionary(lang); // Esto sí es async y está bien
   return (
-    <main>
+    <div>
       <div className="pl-3 pr-3 pb-10">
         <div className="grid grid-cols-3 justify-between gap-2 mb-10">
           <div className="col-span-1">
@@ -24,9 +29,9 @@ export default function Home() {
           <div className="col-span-1 w-8 h-16 bg-brand-green rounded-l-full sm:h-36 sm:w-20" />
           <div className="text-[#4e5152] text-[21px] col-span-10 pl-2 
           sm:text-7xl">
-            <h1>You deserve a space that is<br />
-            beautiful and comfortable,<br />
-            but above all, functional!</h1>
+            <h1>{dict.title.firstLine}</h1>
+            <h1>{dict.title.secondLine}</h1>
+            <h1>{dict.title.thirdLine}</h1>
           </div>
           <div className="col-span-1 flex flex-row items-end justify-end self-end relative bottom-2 right-4">
             <div className="w-8 h-4 bg-brand-blue rounded-t-full sm:w-32 sm:h-16" />
@@ -36,7 +41,7 @@ export default function Home() {
       </div>
       <div className="sm:mx-20">
         <TitleProp
-          title="SERVICES"
+          title={dict.subtitles.services}
           first_color="blue"
           second_color="green" />
 
@@ -73,7 +78,7 @@ export default function Home() {
         </div>
 
         <TitleProp
-          title="PROJECTS"
+          title={dict.subtitles.projects}
           first_color="green"
           second_color="yellow" />
 
@@ -132,7 +137,7 @@ export default function Home() {
         </div>
 
         <TitleProp
-          title="COMMON QUESTIONS"
+          title={dict.subtitles.commonques}
           first_color="yellow"
           second_color="blue" />
 
@@ -160,6 +165,6 @@ export default function Home() {
           <Form />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

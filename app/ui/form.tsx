@@ -6,14 +6,13 @@ interface FormProp {
     subtitle?: string;
 }
 
-// --- DATA STRUCTURE (Provided by you) ---
 interface FormField {
     id: string;
     name: string;
     label: string;
     elementType: 'input' | 'textarea' | 'file';
     type?: string; // HTML type attribute (text, email, file, etc.) - optional for textarea
-    required?: boolean; // To show the asterisk
+    required?: boolean;
     autoComplete?: string;
     rows?: number; // Specific to textarea
     maxLength?: number; // Specific to textarea

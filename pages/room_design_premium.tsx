@@ -1,4 +1,4 @@
-import TitleProp from "@/app/ui/titles";
+import TitleProp from "@/app/[lang]/titles";
 import Header from "@/app/ui/header";
 import Image from 'next/image';
 

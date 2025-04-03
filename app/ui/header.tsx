@@ -1,10 +1,13 @@
+"use client"
 import { SocialIcon } from 'react-social-icons';
 import BurgerMenu from './burger_menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import FullLogo from '@/public/logos/full_logo.svg';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname()
   return (
     <div className="pt-5 pb-5 gap-8 items-center grid-cols-12 flex sm:justify-between sm:pb-10 sm:pt-10 sm:pl-10 sm:pr-10">
       <div className='sm:hidden ml-3 col-span-3'>
@@ -28,9 +31,9 @@ export default function Header() {
         </Link>
       </div>
       <div className="hidden cursor-pointer sm:flex items-center gap-4">
-        <p>ES</p>
-        <p>EN</p>
-        <p>HR</p>
+        <Link href="/es" locale="es">ES</Link>
+        <Link href="/en" locale="en">EN</Link>
+        <Link href="/hr" locale="hr">HR</Link>
         <BurgerMenu position='right' />
       </div>
     </div>

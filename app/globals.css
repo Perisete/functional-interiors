@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Montserrat';
   src: url('/static/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -14,7 +14,7 @@
   src: url('/static/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 @layer utilities {
   .text-balance {

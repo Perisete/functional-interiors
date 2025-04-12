@@ -1,6 +1,3 @@
-// import Image from "next/image";
-// import "./carousel.css";
-// import Carousel, { CarouselItem } from "./carousel";
 import TitleProp from "../ui/titles";
 import ColorTextBox from "../ui/color_text_box";
 import Form from "../ui/form";
@@ -10,19 +7,19 @@ type SupportedLocales = 'en' | 'es' | 'hr';
 
 export default async function Home({ params }: { params: { lang: SupportedLocales } }) {
   const lang = params.lang;
-  const dict = await getDictionary(lang); // Esto sí es async y está bien
+  const dict = await getDictionary(lang);
   return (
     <div>
       <div className="pl-3 pr-3 pb-10">
         <div className="grid grid-cols-3 justify-between gap-2 mb-10">
           <div className="col-span-1">
-            <img className="object-cover h-full w-full" src="images//1.jpg" alt="" />
+            <img className="object-cover h-full w-full" src="/images/1.jpg" alt="" />
           </div>
           <div className="col-span-1">
-            <img className="object-cover h-full w-full" src="images//2.jpg" alt="" />
+            <img className="object-cover h-full w-full" src="/images/2.jpg" alt="" />
           </div>
           <div className="col-span-1">
-            <img className="object-cover h-full w-full" src="images//3.jpg" alt="" />
+            <img className="object-cover h-full w-full" src="/images/3.jpg" alt="" />
           </div>
         </div>
         <div className="grid grid-cols-12 items-center justify-items-center sm:px-24">

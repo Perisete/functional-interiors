@@ -1,70 +1,49 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-import Negotiator from 'negotiator';
-import { match } from '@formatjs/intl-localematcher';
+import { NextResponse } from "next/server";
+import { match } from '@formatjs/intl-localematcher'
+import Negotiator from 'negotiator'
+import type { NextRequest } from 'next/server'
 
-let locales = ['en', 'es', 'hr'];
+ 
+let locales = ['en', 'es', 'hr']
 let defaultLocale = 'en';
-
-function getLocale(request: NextRequest): string {
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-  // @ts-ignore
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-  try {
-    return match(languages, locales, defaultLocale);
-  } catch (e) {
-    return defaultLocale;
+ 
+function getLocale(request: NextRequest): string { // Add type annotation
+    const negotiatorHeaders: Record<string, string> = {};
+    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+  
+    let languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales);
+  
+    console.log("Negotiated languages: ", languages);
+    try {
+      // match(negotiatedLanguages, supportedLocales, defaultLocale)
+      return match(languages, locales, defaultLocale);
+    } catch (e) {
+      console.error("Error matching locale in middleware: ", e);
+      // Fallback to default if matching fails
+      return defaultLocale;
+    }
   }
-}
-
+ 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-  const isStaticAssetOrApi =
-    pathname.startsWith('/_next') ||
-    pathname.includes('/api/') ||
-    /\.(.*)$/.test(pathname) ||
-    pathname.startsWith('/images') ||
-    pathname.startsWith('/static');
-
-  if (isStaticAssetOrApi) {
-    return undefined;
-  }
-
-  const firstSegment = pathname.split('/')[1];
-  const pathnameLocale = locales.find(locale => locale === firstSegment);
-
-  if (pathnameLocale) {
-
-    if (pathnameLocale === defaultLocale) {
-      const newPath = pathname.replace(`/${defaultLocale}`, '') || '/';
-      const newUrl = new URL(newPath + request.nextUrl.search, request.url);
-      console.log(`Middleware: Quitando prefijo default (${pathname} -> ${newPath})`);
-      return NextResponse.redirect(newUrl, 308); // 308 = Permanent Redirect
-    } else {
-      console.log(`Middleware: Prefijo idioma OK (${pathname})`);
-      return undefined;
-    }
-
-  } else {
-    const preferredLocale = getLocale(request);
-
-    if (preferredLocale === defaultLocale) {
-      const rewritePath = `/${defaultLocale}${pathname === '/' ? '' : pathname}`;
-      const rewriteUrl = new URL(rewritePath + request.nextUrl.search, request.url);
-      console.log(`Middleware: Reescribiendo ${pathname} a ${rewriteUrl.pathname} (interno)`);
-      return NextResponse.rewrite(rewriteUrl);
-    } else {
-      const newPath = `/${preferredLocale}${pathname === '/' ? '' : pathname}`;
-      const newUrl = new URL(newPath + request.nextUrl.search, request.url);
-      console.log(`Middleware: Redirigiendo ${pathname} a idioma preferido ${newUrl.pathname}`);
-      return NextResponse.redirect(newUrl, 307); // 307 = Temporary Redirect
-    }
-  }
+  // Check if there is any supported locale in the pathname
+  const { pathname } = request.nextUrl
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+ 
+  console.log("Pathname: ", pathname)
+  console.log("Pathname has locale: ", pathnameHasLocale)
+  if (pathnameHasLocale) return
+ 
+  const locale = getLocale(request)
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  console.log("Redirecting to: ", request.nextUrl.pathname)
+  return NextResponse.redirect(request.nextUrl)
 }
-
+ 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|images|static|favicon.ico|.*\\.).*)',
+    // Run on all paths except for the ones starting with _next or api
+    '/((?!api|_next/static|_next/image|favicon.ico|images).*)',
   ],
-};
+}

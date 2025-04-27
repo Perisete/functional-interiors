@@ -1,20 +1,17 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-brand-blue: #0097b2;
+  --color-brand-green: #80b26d;
+  --color-brand-yellow: #ffde59;
+  --color-brand-lightgreen: #d6e1d2;
+  --color-brand-lightyellow: #fffae9;
+  --color-brand-lightblue: #e6f1f4;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @font-face {
-  font-family: 'Montserrat';
-  src: url('/static/Montserrat-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/static/Montserrat-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-} */
 
 @layer utilities {
   .text-balance {
@@ -22,9 +19,35 @@
   }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer components {
+  .file-selector-button-base {
+    @apply mr-4 py-2 px-4 rounded-full border-0 text-sm font-semibold
+           text-white
+           cursor-pointer transition-opacity hover:opacity-90;
+  }
+
+  .form-input-file.file-button-brand-blue::file-selector-button {
+     @apply file-selector-button-base bg-brand-blue text-black;
+  }
+
+  .form-input-file.file-button-brand-green::file-selector-button {
+     @apply file-selector-button-base bg-brand-green text-black;
+  }
+
+  .form-input-file.file-button-brand-yellow::file-selector-button {
+     @apply file-selector-button-base bg-brand-yellow text-black;
+  }
+
+  .form-input-file.file-button-brand-lightblue::file-selector-button {
+     @apply file-selector-button-base bg-brand-lightblue text-black;
+  }
+   .form-input-file.file-button-brand-lightgreen::file-selector-button {
+     @apply file-selector-button-base bg-brand-lightgreen text-black;
+  }
+
+  .form-input-file-wrapper {
+     @apply block w-full text-sm text-gray-900 border border-gray-300 rounded-full cursor-pointer bg-gray-50 focus:outline-none;
+  }
 }
 
 body {
@@ -35,6 +58,8 @@ body {
 
 h3 {
   font-size: 10px;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
 }
 
 .bg-brand-lightyellow {
@@ -64,3 +89,4 @@ h3 {
 .bg-brand-darkblue {
   background-color: #006679;
 }
+

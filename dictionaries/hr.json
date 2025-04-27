@@ -1,14 +1,67 @@
 {
-    "title":
-    {
-        "firstLine": "Zaslužuješ prostor koji je",
-        "secondLine": "lijep i udoban ali iznad",
-        "thirdLine": "svega, funkcionalan!"
+    "main": {
+        "title": {
+            "firstLine": "Zaslužujete prostor koji je",
+            "secondLine": "lijep i udoban,",
+            "thirdLine": "ali prije svega, funkcionalan!"
+        },
+        "subtitles": {
+            "services": {
+                "title": "USLUGE",
+                "design_consultation": {
+                    "title": "KONZULTACIJE O DIZAJNU",
+                    "description": "Mučite se s donošenjem odluka u dizajnu i želite podršku? Riješite sve nedoumice s nama!"
+                },
+                "room_design": {
+                    "title": "DIZAJN PROSTORIJE",
+                    "description": "Pitate se kako postići svoj stil i maksimalno iskoristiti prostor? Stvorimo dom iz snova!"
+                },
+                "room_design_premium": {
+                    "title": "DIZAJN PROSTORIJE - PREMIUM",
+                    "description": "Niste sigurni odakle uopće početi? Pomoći ćemo vam da s lakoćom vizualizirate svoj budući dom!"
+                }
+            },
+            "projects": {
+                "title": "PROJEKTI",
+                "busy_student_room": {
+                    "title": "SOBA ZAUZETOG STUDENTA",
+                    "description": "Spavaća soba, ured i glazbena soba - može li sve udobno stati u 8m²?"
+                },
+                "elegant_living_room": {
+                    "title": "ELEGANTNI UGODNI DNEVNI BORAVAK",
+                    "description": "Opuštajući i prirodan osjećaj, izravno u udobnosti doma. Bi li funkcioniralo u vašem prostoru?"
+                },
+                "sophisticated_reception": {
+                    "title": "SOFISTICIRANA RECEPCIJA",
+                    "description": "Čist i sofisticiran, ali gostoljubiv prijemni prostor. Vaši će se gosti osjećati kao kod kuće!"
+                }
+            },
+            "common_questions": "ČESTA PITANJA",
+            "more_info": "VIŠE INFORMACIJA",
+            "see_more": "VIDI VIŠE"
+        }
     },
-    "subtitles":
-    {
-        "services": "USLUGE",
-        "projects": "PROJEKTI",
-        "commonques": "ČESTA PITANJA"
-    }    
+    "design_consultation": {
+        "p1": "Imate ideje, ali trebate mali poticaj u pravom smjeru? Možda niste sigurni hoće li vaša vizija ispasti onako kako je zamišljate? Ili biste se željeli posavjetovati o materijalima prihvatljivim za kućne ljubimce i izdržljivim završnim obradama? Onda je ovo usluga za vas!",
+        "list": {
+            "li1": "60-minutni video poziv za općenite savjete i prijedloge za vaš(e) prostor(e).",
+            "li2": "Sve što se napravi/prikaže tijekom poziva bit će vam poslano e-poštom (brze skice i moodboardovi, zajedno pregledani linkovi, popis komentiranih materijala i završnih obrada, itd.)",
+            "li3": "Dodatni materijali nakon poziva nisu uključeni."
+        },
+        "form": {
+            "subtitle": {
+                "li1": "Cijena 60-minutnih konzultacija s dizajnerom je 40€.",
+                "li2": "Primit ćete link putem e-pošte za zakazivanje poziva.",
+                "li3": "Možete priložiti fotografije, tlocrte i dodatne komentare, ali nije nužno."
+            }
+        }
+    },
+    "form": {
+        "name": "Ime",
+        "email": "Email",
+        "room_functions": "Funkcija(e) prostorije",
+        "file": "Fotografije, tlocrt, inspiracija, itd.",
+        "message": "Poruka",
+        "submit": "Pošalji"
+    }
 }

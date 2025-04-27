@@ -18,7 +18,7 @@ export const TitleProp = ({ title, first_color, second_color, subtitle }: TitleP
                     </div>
                 </div>
             </div>
-            <div className="justify-self-center ml-10 mr-10">
+            <div className="justify-self-center mx-10">
                 <h3 className="text-center">{subtitle}</h3>
             </div>
         </div>

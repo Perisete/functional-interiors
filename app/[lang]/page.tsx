@@ -23,12 +23,13 @@ export default async function Home({ params }: { params: { lang: SupportedLocale
           </div>
         </div>
         <div className="grid grid-cols-12 items-center justify-items-center sm:px-24">
-          <div className="col-span-1 w-8 h-16 bg-brand-green rounded-l-full sm:h-36 sm:w-20" />
+          <div className="col-span-1 w-8 h-16 bg-brand-green rounded-l-full 
+          sm:h-36 sm:w-20" />
           <div className="text-[#4e5152] text-[21px] col-span-10 pl-2 
           sm:text-7xl">
-            <h1>{dict.title.firstLine}</h1>
-            <h1>{dict.title.secondLine}</h1>
-            <h1>{dict.title.thirdLine}</h1>
+            <h1>{dict.main.title.firstLine}</h1>
+            <h1>{dict.main.title.secondLine}</h1>
+            <h1>{dict.main.title.thirdLine}</h1>
           </div>
           <div className="col-span-1 flex flex-row items-end justify-end self-end relative bottom-2 right-4">
             <div className="w-8 h-4 bg-brand-blue rounded-t-full sm:w-32 sm:h-16" />
@@ -38,44 +39,45 @@ export default async function Home({ params }: { params: { lang: SupportedLocale
       </div>
       <div className="sm:mx-20">
         <TitleProp
-          title={dict.subtitles.services}
+          title={dict.main.subtitles.services.title}
           first_color="blue"
           second_color="green" />
 
         <div className="grid grid-rows-3 gap-10 mb-10 mt-10
                         sm:pl-0 sm:grid-cols-3 sm:grid-rows-1">
           <ColorTextBox
-            title={"DESIGN CONSULTATION"}
-            text={"Struggling to make choices in your design, and want support? Resolve all doubts with us!"}
+            title={dict.main.subtitles.services.design_consultation.title}
+            text={dict.main.subtitles.services.design_consultation.description}
             textpos="right"
             color={"lightgreen"}
             imgsrc={"images/3.jpg"}
-            circle_text="MORE INFO"
+            circle_text={dict.buttons.more_info}
             circle_color="yellow"
-            link="design_consultation" />
+            link={lang + "/design_consultation"} />
 
           <ColorTextBox
-            title={"ROOM DESIGN"}
-            text={"Wondering how to achieve your style and maximize your space? Let's create your dream home!"}
+            title={dict.main.subtitles.services.room_design.title}
+            text={dict.main.subtitles.services.room_design.description}
             textpos="left"
             color={"lightyellow"}
             imgsrc={"images/1.jpg"}
-            circle_text="MORE INFO"
-            circle_color="blue" />
+            circle_text={dict.buttons.more_info}
+            circle_color="blue"
+            link={lang + "/room_design"} />
 
           <ColorTextBox
-            title={"ROOM DESIGN - PREMIUM"}
-            text={"Not sure where to even start? We'll help you visualize your future home with ease!"}
+            title={dict.main.subtitles.services.room_design_premium.title}
+            text={dict.main.subtitles.services.room_design_premium.description}
             textpos="right"
             color={"lightblue"}
             imgsrc={"images/3.jpg"}
-            circle_text="MORE INFO"
+            circle_text={dict.buttons.more_info}
             circle_color="green"
             link="room_design_premium" />
         </div>
 
         <TitleProp
-          title={dict.subtitles.projects}
+          title={dict.main.subtitles.projects.title}
           first_color="green"
           second_color="yellow" />
 
@@ -106,60 +108,63 @@ export default async function Home({ params }: { params: { lang: SupportedLocale
 
         <div className="grid grid-cols-1 gap-10 mb-10 sm:pl-0 sm:grid-cols-3 mt-10">
           <ColorTextBox
-            title={"BUSY STUDENT ROOM"}
-            text={"Bedroom, office, and music room - can everything fit comfortably in 8m²"}
+            title={dict.main.subtitles.projects.busy_student_room.title}
+            text={dict.main.subtitles.projects.busy_student_room.description}
             textpos="right"
             color={"lightblue"}
             imgsrc={"images/4.jpg"}
-            circle_text="SEE MORE"
+            circle_text={dict.buttons.see_more}
             circle_color="green" />
 
           <ColorTextBox
-            title={"ELEGANT COZY LIVING ROOM"}
-            text={"Relaxing and natural feeling, right in the comfort of home. Could it work in your space?"}
+            title={dict.main.subtitles.projects.elegant_living_room.title}
+            text={dict.main.subtitles.projects.elegant_living_room.description}
             textpos="left"
             color={"lightgreen"}
             imgsrc={"images/8.jpg"}
-            circle_text="SEE MORE"
+            circle_text={dict.buttons.see_more}
             circle_color="yellow" />
 
           <ColorTextBox
-            title={"SOPHISTICATED RECEPTION"}
-            text={"Clean and sophisticated, but welcoming reception area. Your guests will feel right at home!"}
+            title={dict.main.subtitles.projects.sophisticated_reception.title}
+            text={dict.main.subtitles.projects.sophisticated_reception.description}
             textpos="right"
             color={"lightyellow"}
             imgsrc={"images/7.jpeg"}
-            circle_text="SEE MORE"
+            circle_text={dict.buttons.see_more}
             circle_color="blue" />
         </div>
 
         <TitleProp
-          title={dict.subtitles.commonques}
+          title={dict.main.subtitles.common_questions.title}
           first_color="yellow"
           second_color="blue" />
 
         <div className="mb-10 ml-5 mr-5 mt-10">
-          <p className="font-bold">Which service should I chose?</p>
+          <p className="font-bold">{dict.main.subtitles.common_questions.subtitle1.title}</p>
           <ul className="list-disc ml-7">
-            <li>blablabla</li>
-            <li>blablabla</li>
-            <li>blablabla</li>
+            <li>{dict.main.subtitles.common_questions.subtitle1.li1}</li>
+            <li>{dict.main.subtitles.common_questions.subtitle1.li2}</li>
+            <li>{dict.main.subtitles.common_questions.subtitle1.li3}</li>
           </ul>
-          <p className="font-bold mt-5">What to expect?</p>
+          <p className="font-bold mt-5">{dict.main.subtitles.common_questions.subtitle2.title}</p>
           <ul className="list-disc ml-7">
-            <li>We'll require pictures of your space, as well as a current floor plan with measurements. Don't worry, this can be a digital drawing, or just sketched by you!</li>
-            <li>In the initial videocall, we'll discuss the issues you have in the space, as well as your needs and wants for the design.</li>
-            <li>After receiving the design documents via e-mail, you'll have a chance to discuss the designer's choices in a final videocall, and ask for revisions if needed. Or maybe you'll decide you'd like another service too!</li>
+            <li>{dict.main.subtitles.common_questions.subtitle2.li1}</li>
+            <li>{dict.main.subtitles.common_questions.subtitle2.li2}</li>
+            <li>{dict.main.subtitles.common_questions.subtitle2.li3}</li>
           </ul>
         </div>
 
         <TitleProp
-          title="CONTACT US!"
+          title={dict.main.subtitles.contact_us.title}
           first_color="green"
           second_color="yellow"
-          subtitle="Do you have any questions, or would you like a different service? Let us know!" />
+          subtitle={dict.main.subtitles.contact_us.subtitle} />
         <div className="mb-10 ml-5 mr-5 mt-10">
-          <Form />
+          <Form 
+          dictionary={dict.form}
+          file_color="green"
+          />
         </div>
       </div>
     </div>

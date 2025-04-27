@@ -1,6 +1,6 @@
 import TitleProp from "@/app/[lang]/titles";
 import Header from "@/app/ui/header";
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function RoomDesignPremium() {
     return (

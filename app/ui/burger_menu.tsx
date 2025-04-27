@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Logo from '@/public/logos/logo.svg';
 
 export default function BurgerMenu({ position }: { position: 'left' | 'right' }) {

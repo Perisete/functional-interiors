@@ -1,7 +1,7 @@
 "use client"
 import { SocialIcon } from 'react-social-icons';
 import BurgerMenu from './burger_menu';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import FullLogo from '@/public/logos/full_logo.svg';
 import { usePathname } from 'next/navigation';

@@ -1,6 +1,6 @@
 import TitleProp from "@/app/ui/titles";
 import Header from "@/app/ui/header";
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Form from "@/app/ui/form";
 
 export default function DesignConsultation() {

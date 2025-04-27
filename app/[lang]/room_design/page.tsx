@@ -1,5 +1,5 @@
 import TitleProp from "@/app/ui/titles";
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Form from "@/app/ui/form";
 import { getDictionary } from "../dictionaries";
 

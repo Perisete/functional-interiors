@@ -33,10 +33,10 @@ export default async function RoomDesign({ params }: { params: { lang: Supported
 
                 <div className="justify-self-center sm:col-span-3 sm:justify-self-end">
                     <Image
-                        src="/images/8.jpg"
+                        src="/images/1.jpg"
                         alt="Room Design"
-                        width={260}
-                        height={260}
+                        width={300}
+                        height={300}
                         className="rounded-xl"
                         style={{
                             maxWidth: "100%",

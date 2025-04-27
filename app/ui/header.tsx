@@ -31,7 +31,9 @@ export default function Header() {
   return (
     <div className="pt-5 pb-5 gap-8 items-center grid-cols-12 flex sm:justify-between sm:pb-10 sm:pt-10 sm:pl-10 sm:pr-10">
       <div className='sm:hidden ml-3 col-span-3'>
-        <BurgerMenu position='left' />
+        <BurgerMenu
+          position='left'
+          locales={[esHref, enHref, hrHref]} />
       </div>
       <div className='sm:gap-6 hidden sm:flex'>
         <SocialIcon url="https://x.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />
@@ -46,18 +48,14 @@ export default function Header() {
             src={FullLogo}
             alt="Functional Interiors"
             className="w-auto h-6 sm:h-14"
-            priority
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+            priority/>
         </Link>
       </div>
       <div className="hidden cursor-pointer sm:flex items-center gap-4">
         <Link href={esHref} locale="es">ES</Link>
         <Link href={enHref} locale="en">EN</Link>
         <Link href={hrHref} locale="hr">HR</Link>
-        <BurgerMenu position='right' />
+        <BurgerMenu position='right'/>
       </div>
     </div>
   );

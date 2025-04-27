@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Logo from '@/public/logos/logo.svg';
 
-export default function BurgerMenu({ position }: { position: 'left' | 'right' }) {
+export default function BurgerMenu({ position, locales = ["/es", "/en", "/hr"] }: { position: 'left' | 'right', locales?: string[] }) {
     const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
@@ -62,6 +62,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     };
+    console.log("locales:", locales[0]);
     return (
         <div>
             <div onClick={toggleMenu}>
@@ -111,10 +112,7 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                         alt="Functional Interiors Logo"
                         priority
                         className="w-auto h-16 sm:h-24 mt-5 mb-5"
-                        style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                    />
                 </div>
                 <ul className="p-4 space-y-8 text-lg">
                     <li>
@@ -148,10 +146,17 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                         </div>
                     </li>
                 </ul>
-                <div className="absolute bottom-0 w-full p-4 text-center text-sm text-gray-500">
-                    <hr className="mb-5" />
-                    <p>© 2025 Functional Interiors</p>
-                    <p>All rights reserved</p>
+                <div className="absolute bottom-0 w-full p-4 text-center text-sm text-gray-500 flex flex-col gap-5">
+                    <hr />
+                    <div className="flex justify-center align-middle gap-6 sm:hidden">
+                        <Link href={locales[0]} locale="es">ES</Link>
+                        <Link href={locales[1]} locale="en">EN</Link>
+                        <Link href={locales[2]} locale="hr">HR</Link>
+                    </div>
+                    <div>
+                        <p>© 2025 Functional Interiors</p>
+                        <p>All rights reserved</p>
+                    </div>
                 </div>
             </div>
         </div >

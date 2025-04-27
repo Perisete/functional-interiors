@@ -1,67 +1,105 @@
 {
     "main": {
         "title": {
-            "firstLine": "Mereces un espacio que sea",
-            "secondLine": "bonito y cómodo,",
-            "thirdLine": "¡pero sobre todo, funcional!"
+            "firstLine": "Mereces un espacio",
+            "secondLine": "bello y cómodo,",
+            "thirdLine": "pero sobre todo, ¡funcional!"
         },
         "subtitles": {
             "services": {
                 "title": "SERVICIOS",
                 "design_consultation": {
                     "title": "CONSULTORÍA DE DISEÑO",
-                    "description": "¿Te cuesta tomar decisiones sobre tu diseño y quieres ayuda? ¡Resuelve todas tus dudas con nosotros!"
+                    "description": "¿Te cuesta tomar decisiones sobre tu diseño y necesitas apoyo? ¡Resuelve todas tus dudas con nosotros!"
                 },
                 "room_design": {
-                    "title": "DISEÑO DE ESTANCIA",
-                    "description": "¿Te preguntas cómo conseguir tu estilo y maximizar tu espacio? ¡Creemos la casa de tus sueños!"
+                    "title": "DISEÑO DE ESTANCIAS",
+                    "description": "¿Te preguntas cómo lograr tu estilo y maximizar tu espacio? ¡Creemos la casa de tus sueños!"
                 },
                 "room_design_premium": {
-                    "title": "DISEÑO DE ESTANCIA - PREMIUM",
-                    "description": "¿No sabes ni por dónde empezar? ¡Te ayudaremos a visualizar tu futuro hogar con facilidad!"
+                    "title": "DISEÑO DE ESTANCIAS - PREMIUM",
+                    "description": "¿No sabes ni por dónde empezar? ¡Te ayudamos a visualizar tu futuro hogar fácilmente!"
                 }
             },
             "projects": {
                 "title": "PROYECTOS",
                 "busy_student_room": {
-                    "title": "HABITACIÓN PARA ESTUDIANTE",
-                    "description": "Dormitorio, oficina y sala de música: ¿puede caber todo cómodamente en 8m²?"
+                    "title": "HABITACIÓN MULTIUSOS ESTUDIANTE",
+                    "description": "Dormitorio, oficina y sala de música. ¿Puede caber todo cómodamente en 8m²?"
                 },
                 "elegant_living_room": {
                     "title": "SALÓN ELEGANTE Y ACOGEDOR",
-                    "description": "Sensación relajante y natural, en la comodidad del hogar. ¿Podría funcionar en tu espacio?"
+                    "description": "Sensación relajante y natural, en la comodidad de tu hogar. ¿Funcionaría en tu espacio?"
                 },
                 "sophisticated_reception": {
                     "title": "RECEPCIÓN SOFISTICADA",
                     "description": "Zona de recepción limpia y sofisticada, pero acogedora. ¡Tus invitados se sentirán como en casa!"
                 }
             },
-            "common_questions": "PREGUNTAS FRECUENTES",
-            "more_info": "MÁS INFO",
-            "see_more": "VER MÁS"
+            "common_questions": {
+                "title": "PREGUNTAS FRECUENTES",
+                "subtitle1": {
+                    "title": "¿Qué servicio debería elegir?",
+                    "li1": "blabla",
+                    "li2": "blabla",
+                    "li3": "blabla"
+                },
+                "subtitle2": {
+                    "title": "¿Qué esperar?",
+                    "li1": "Necesitaremos fotos de tu espacio, así como un plano actual con medidas. No te preocupes, ¡puede ser un dibujo digital o simplemente un boceto hecho por ti!",
+                    "li2": "En la videollamada inicial, hablaremos sobre los problemas que tienes en el espacio, así como tus necesidades y deseos para el diseño.",
+                    "li3": "Tras recibir los documentos del diseño por correo electrónico, tendrás la oportunidad de comentar las decisiones del diseñador en una videollamada final y solicitar revisiones si es necesario. ¡O quizás decidas que también quieres otro servicio!"
+                }
+            },
+            "contact_us": {
+                "title": "CONTACTO",
+                "subtitle": "¿Tienes alguna pregunta o te gustaría un servicio diferente? ¡Cuéntanos!"
+            }
         }
     },
     "design_consultation": {
         "p1": "¿Tienes ideas, pero necesitas un pequeño empujón en la dirección correcta? ¿Quizás no estás seguro/a de si tu visión resultará como la imaginas? ¿O te gustaría consultar sobre materiales aptos para mascotas y acabados duraderos? ¡Entonces este es el servicio para ti!",
         "list": {
-            "li1": "Videollamada de 60 min para consejos generales y sugerencias para tu(s) espacio(s).",
-            "li2": "Todo lo realizado/mostrado en la llamada se te enviará por correo electrónico (bocetos rápidos y 'moodboards', enlaces vistos conjuntamente, lista de materiales y acabados comentados, etc.)",
-            "li3": "Entregables adicionales posteriores a la llamada no están incluidos."
+            "li1": "Videollamada de 60 min para asesoramiento general y sugerencias para tu(s) espacio(s).",
+            "li2": "Todo lo hecho/mostrado en la llamada se te enviará por correo electrónico (bocetos rápidos y 'moodboards', enlaces vistos juntos, lista de materiales y acabados comentados, etc.)",
+            "li3": "No se incluyen entregables adicionales posteriores a la llamada."
         },
         "form": {
             "subtitle": {
-                "li1": "El precio de la consultoría de 60 min con el/la diseñador/a es de 40€.",
+                "li1": "El precio de la consulta de 60 min con el/la diseñador/a es de 40€.",
                 "li2": "Recibirás un enlace por correo electrónico para programar la llamada.",
-                "li3": "Puedes aportar fotos, planos y comentarios adicionales, pero no es necesario."
+                "li3": "Puedes proporcionar fotos, planos y comentarios adicionales, pero no es necesario."
+            }
+        }
+    },
+    "room_design": {
+        "p1": "¿No sabes qué muebles comprar y cómo decorar tu espacio? ¿Te cuesta encontrar tu estilo? ¡Podemos ayudarte a adaptar la distribución, funcionalidad y estética de tu espacio para reflejar tu personalidad única!",
+        "list": {
+            "li1": "Videollamada de 30 min para entender tu espacio, estilo y necesidades funcionales.",
+            "li2": "Planificación del espacio (plano con tamaño y ubicación sugeridos de los muebles).",
+            "li3": "Un 'moodboard' para el espacio con el estilo del cliente (piezas de mobiliario sugeridas, paleta de colores, materiales, acabados, luminarias).",
+            "li4": "Teniendo en cuenta necesidades de accesibilidad, adaptaciones para niños y mascotas.",
+            "li5": "Hasta 2 revisiones."
+        },
+        "form": {
+            "subtitle": {
+                "li1": "Por favor, proporciona fotos y el plano (puede ser oficial o un boceto hecho por ti).",
+                "li2": "El precio comienza en 100€ y depende del tamaño y la(s) función(es) de tu espacio.",
+                "li3": "Recibirás un correo electrónico con el precio para tu(s) estancia(s) y un enlace para programar la reunión introductoria cuando reserves el servicio."
             }
         }
     },
     "form": {
-        "name": "Nombre",
-        "email": "Email",
+        "name": "Nombre*",
+        "email": "Correo electrónico*",
         "room_functions": "Función(es) de la estancia",
         "file": "Fotos, plano, inspiración, etc.",
         "message": "Mensaje",
-        "submit": "Enviar"
+        "submit": "ENVIAR"
+    },
+    "buttons": {
+        "more_info": "MÁS INFO",
+        "see_more": "VER MÁS",
+        "contact_us": "CONTACTAR"
     }
 }

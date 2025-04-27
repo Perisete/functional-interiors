@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Logo from '@/public/logos/logo.svg';
 
 export default function BurgerMenu({ position }: { position: 'left' | 'right' }) {
@@ -80,7 +80,6 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                     />
                 </svg>
             </div>
-
             <div
                 onClick={showMenu ? toggleMenu : undefined}
                 className={`${darkEffectCN} z-40`}
@@ -112,7 +111,10 @@ export default function BurgerMenu({ position }: { position: 'left' | 'right' })
                         alt="Functional Interiors Logo"
                         priority
                         className="w-auto h-16 sm:h-24 mt-5 mb-5"
-                    />
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
                 <ul className="p-4 space-y-8 text-lg">
                     <li>

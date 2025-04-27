@@ -1,5 +1,5 @@
 import TitleProp from "@/app/ui/titles";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Form from "@/app/ui/form";
 import { getDictionary } from "../dictionaries";
 
@@ -37,8 +37,11 @@ export default async function DesignConsultation({ params }: { params: { lang: S
                         alt="Design Consultation"
                         width={260}
                         height={260}
-                        layout="intrinsic"
-                        className="rounded-xl" />
+                        className="rounded-xl"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
             </div>
             <div className="mx-10 my-10">
@@ -58,6 +61,5 @@ export default async function DesignConsultation({ params }: { params: { lang: S
 
             </div>
         </main>
-
     );
 }

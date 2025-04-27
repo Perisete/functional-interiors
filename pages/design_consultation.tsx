@@ -1,11 +1,10 @@
 import TitleProp from "@/app/ui/titles";
 import Header from "@/app/ui/header";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Form from "@/app/ui/form";
 
 export default function DesignConsultation() {
     return (
-
         <main>
             <Header />
             <div className="mt-10 mb-10">
@@ -50,11 +49,13 @@ export default function DesignConsultation() {
                         alt="Room Design Premium"
                         width={400}
                         height={400}
-                        layout="intrinsic"
-                        className="mx-auto rounded-xl" />
+                        className="mx-auto rounded-xl"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
             </div>
         </main>
-
     );
 }

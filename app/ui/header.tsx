@@ -1,7 +1,7 @@
 "use client"
 import { SocialIcon } from 'react-social-icons';
 import BurgerMenu from './burger_menu';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import FullLogo from '@/public/logos/full_logo.svg';
 import { usePathname } from 'next/navigation';
@@ -47,7 +47,10 @@ export default function Header() {
             alt="Functional Interiors"
             className="w-auto h-6 sm:h-14"
             priority
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </Link>
       </div>
       <div className="hidden cursor-pointer sm:flex items-center gap-4">

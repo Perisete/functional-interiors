@@ -1,10 +1,9 @@
 import TitleProp from "@/app/[lang]/titles";
 import Header from "@/app/ui/header";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function RoomDesignPremium() {
     return (
-
         <main>
             <Header />
             <div className="mt-10 mb-10">
@@ -36,11 +35,13 @@ export default function RoomDesignPremium() {
                         alt="Room Design Premium"
                         width={800}
                         height={800}
-                        layout="intrinsic"
-                        className="mx-auto rounded-xl" />
+                        className="mx-auto rounded-xl"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
             </div>
         </main>
-
     );
 }

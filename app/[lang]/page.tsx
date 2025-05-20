@@ -37,7 +37,7 @@ export default async function Home({ params }: { params: { lang: SupportedLocale
           </div>
         </div>
       </div>
-      <div className="sm:mx-20">
+      <div className="mt-10 sm:mx-20">
         <TitleProp
           title={dict.main.subtitles.services.title}
           first_color="blue"
@@ -73,7 +73,7 @@ export default async function Home({ params }: { params: { lang: SupportedLocale
             imgsrc={"images/3.jpg"}
             circle_text={dict.buttons.more_info}
             circle_color="green"
-            link="room_design_premium" />
+            link={lang + "/room_design_premium"} />
         </div>
 
         <TitleProp

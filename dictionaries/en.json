@@ -79,16 +79,34 @@
     "room_design": {
         "p1": "Not sure what furniture to buy and how to decorate your space? Struggling to find your style? We can help you adapt the layout, functionality and aesthetic of your space, to reflect your unique personality!",
         "list": {
-            "li1": "30 min video call to understand your space, style, and functional needs",
-            "li2": "Space planning (floor plan with suggested furniture size and placement)",
-            "li3": "A moodboard for the space with client’s style (suggested furniture pieces, color palette, materials, finishes, lighting fixtures)",
-            "li4": "Taking into account accessibility needs, adaptations for children and pets",
-            "li5": "Up to 2 revisions"
+            "li1": "30 min video call to understand your space, style, and functional needs.",
+            "li2": "Space planning (floor plan with suggested furniture size and placement).",
+            "li3": "A moodboard for the space with client's style (suggested furniture pieces, color palette, materials, finishes, lighting fixtures).",
+            "li4": "Taking into account accessibility needs, adaptations for children and pets.",
+            "li5": "Up to 2 revisions."
         },
         "form": {
             "subtitle": {
                 "li1": "Please provide photos and the floor plan (can be official, or sketched by you).",
                 "li2": "The price starts at 100€ and depends on the size and function(s) of your space.",
+                "li3": "You will receive an e-mail with the price for your room(s), and a link to schedule the introductory meeting when you book the service."
+            }
+        }
+    },
+    "room_design_premium": {
+        "p1": "Unsure where to begin, what furniture will fit in your room and your style? Do you want to easily visualize how your space will look and feel when it's done? If you want the full experience, this service is for you!",
+        "list": {
+            "li1": "30 min video call to understand your space, style, and functional needs.",
+            "li2": "Space planning (floor plan with suggested furniture size and placement).",
+            "li3": "A moodboard for the space with client's style (suggested furniture pieces, color palette, materials, finishes, lighting fixtures).",
+            "li4": "3D render (2 images per room) of the space, with agreed furniture, materials and finishes, to help you visualize the design of your space.",
+            "li5": "Taking into account accessibility needs, adaptations for children and pets.",
+            "li6": "Up to 2 revisions."
+        },
+        "form": {
+            "subtitle": {
+                "li1": "Please provide photos and the floor plan (can be official, or sketched by you).",
+                "li2": "The price starts at 200€ and depends on the size and function(s) of your space.",
                 "li3": "You will receive an e-mail with the price for your room(s), and a link to schedule the introductory meeting when you book the service."
             }
         }

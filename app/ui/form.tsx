@@ -1,5 +1,3 @@
-// import React from 'react';
-
 const baseInputStyles = "shadow-sm block w-full border-2 sm:text-sm border-gray-300 focus:ring-brand-secondary focus:border-brand-secondary";
 const textInputStyles = `${baseInputStyles} rounded-full px-3 py-1.5`;
 const textareaStyles = `${baseInputStyles} rounded-md px-3 py-1.5`;

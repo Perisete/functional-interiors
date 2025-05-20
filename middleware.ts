@@ -13,7 +13,7 @@ function getLocale(request: NextRequest): string { // Add type annotation
   
     let languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales);
   
-    console.log("Negotiated languages: ", languages);
+    // console.log("Negotiated languages: ", languages);
     try {
       // match(negotiatedLanguages, supportedLocales, defaultLocale)
       return match(languages, locales, defaultLocale);
@@ -31,13 +31,13 @@ export function middleware(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
  
-  console.log("Pathname: ", pathname)
-  console.log("Pathname has locale: ", pathnameHasLocale)
+  // console.log("Pathname: ", pathname)
+  // console.log("Pathname has locale: ", pathnameHasLocale)
   if (pathnameHasLocale) return
  
   const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
-  console.log("Redirecting to: ", request.nextUrl.pathname)
+  // console.log("Redirecting to: ", request.nextUrl.pathname)
   return NextResponse.redirect(request.nextUrl)
 }
  

@@ -8,7 +8,9 @@ import { usePathname } from 'next/navigation';
 
 const supportedLocales = ['en', 'es', 'hr'];
 
-export default function Header() {
+export default function Header({locale}: { locale: typeof supportedLocales }) {
+  console.log("prueba")
+  console.log(locale)
   const pathname = usePathname()
   const getLocalizedPath = (targetLocale: string) => {
     if (!pathname) return `/${targetLocale}`; // Fallback if pathname is null/undefined
@@ -33,7 +35,8 @@ export default function Header() {
       <div className='sm:hidden ml-3 col-span-3'>
         <BurgerMenu
           position='left'
-          locales={[esHref, enHref, hrHref]} />
+          locales={[esHref, enHref, hrHref]}
+          locale_dict />
       </div>
       <div className='sm:gap-6 hidden sm:flex'>
         <SocialIcon url="https://x.com/" bgColor='#ffffff' fgColor='black' className='rounded-lg border-black border-2' style={{ height: 30, width: 30 }} />

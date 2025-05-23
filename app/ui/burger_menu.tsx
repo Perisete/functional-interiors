@@ -6,8 +6,9 @@ import Link from 'next/link';
 import Image from "next/image";
 import Logo from '@/public/logos/logo.svg';
 
-export default function BurgerMenu({ position, locales = ["/es", "/en", "/hr"] }: { position: 'left' | 'right', locales?: string[] }) {
+export default function BurgerMenu({ position, locales = ["/es", "/en", "/hr"], locale_dict }: { position: 'left' | 'right', locales?: string[], locale_dict?: Record<string, string>}) {
     const [showMenu, setShowMenu] = useState(false);
+    console.log(locale_dict)
 
     useEffect(() => {
         // Effect runs when showMenu changes
@@ -124,25 +125,25 @@ export default function BurgerMenu({ position, locales = ["/es", "/en", "/hr"] }
                     <li>
                         <div className="flex items-center">
                             <div className="w-3 h-5 rounded-l-full bg-[#ffde59] mr-2" />
-                            <Link href="/">Services</Link>
+                            <Link onClick={toggleMenu} href="/#services">Services</Link>
                         </div>
                     </li>
                     <li>
                         <div className="flex items-center">
                             <div className="w-3 h-5 rounded-l-full bg-[#80b26d] mr-2" />
-                            <Link href="/">Projects</Link>
+                            <Link onClick={toggleMenu} href="/#projects">Projects</Link>
                         </div>
                     </li>
                     <li>
                         <div className="flex items-center">
                             <div className="w-3 h-5 rounded-l-full bg-[#0097b2] mr-2 flex-shrink-0" />
-                            <Link href="/">Common questions</Link>
+                            <Link onClick={toggleMenu} href="/#common_questions">Common questions</Link>
                         </div>
                     </li>
                     <li>
                         <div className="flex items-center">
                             <div className="w-3 h-5 rounded-l-full bg-[#ffde59] mr-2" />
-                            <Link href="/">Contact us!</Link>
+                            <Link onClick={toggleMenu} href="/#contact_us">Contact us!</Link>
                         </div>
                     </li>
                 </ul>
